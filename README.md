@@ -12,7 +12,7 @@ This Markdown File will go over how *I* believe Mehlville RC's GitHub Repos are 
 - Pre-Comp
 - Comp
 
-This does not necesarily reflect what *will* happen, but what *I* believe should happen
+This does not necesarily reflect what *will* happen, but what *I* believe should happen. This will also include code recomendations for how things are named
 
 # Season Key Points
 
@@ -85,3 +85,47 @@ Comp is defined as the actual Day/Days of the competition we plan to do
 - PRs should be made as full PRs and be made & merged when tested
 - It is advised you make a PR Draft, but is not required
   - If you do make an issue, make sure to reference a development branch/PR in the issue
+
+# Code Naming Conventions
+
+## Variables
+
+All variables for the most part will follow `camelCase` conventions. If a variable is a Constant, it may be preceded by a `k`, which **WILL** affect the `camelCase`. If more context about the Constant is required, use a docstring. If a variable is a Physical Hardware Component, it has a `m_snakeHead`, which means that it will start with a leading letter, then an underscore which **WILL NOT** affect the `camelCase`. The `m_snakeHead` should be indicative of what it represents. `m_` is often used for motors, `p_` is often used for PID, and `e_` is often used for encoders. If you are unsure of what you should choose, just go with `m_` as your default. Any other variables that aren't physical hardware or constants will use `camelCase`.
+
+## Methods
+
+All methods will follow `camelCase` conventions. There isn't any weird trickery with methods, just name them simply. Additionally, put a docstring describing functionality of the method
+
+## Classes
+
+All classes will follow `PascalCase`. Again, no trickery, just name them simply and put a docstring if necesary.
+
+## Example Code
+
+```java
+//            Class          Hardware
+//            vvvvvvvvvvvvvv vvvvvvvvvvvv
+private final DriveSubsystem m_robotDrive = new DriveSubsystem();
+
+//...
+
+// This is a Docstring
+// vvvvvvvvvvvvvvvvvvv
+/**
+ * Sets the swerve ModuleStates.
+ *
+ * @param desiredStates The desired SwerveModule states.
+ */
+
+//          Method                              Variable
+//          vvvvvvvvvvvvvvv                     vvvvvvvvvvvvv
+public void setModuleStates(SwerveModuleState[] desiredStates) {
+  //...
+}
+
+//...
+
+//                      Constant
+//                      vvvvvvvvvvvvvv
+public static final int kShepherdCanId = 7;
+```
