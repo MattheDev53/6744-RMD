@@ -63,7 +63,7 @@ Comp is defined as the actual Day/Days of the competition we plan to do
   - Restrict deletions: Only allow users with bypass permissions to delete matching refs.
   - Require linear history: Prevent merge commits from being pushed to matching refs.
   - Required approvals: The number of approving reviews that are required before a pull request can be merged.
-    - The number half the size of the dev team 
+    - The number of approvals should be half the size of the dev team 
   - Block force pushes: Prevent users with push access from force pushing to refs
 
 ### Comp
