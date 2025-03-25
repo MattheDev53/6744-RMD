@@ -53,6 +53,7 @@ Comp is defined as the actual Day/Days of the competition we plan to do
 > [!NOTE]
 > `d-xxxx` should be used for something that the main developer of a branch is working on, while `e-xxxx` should be used for something a *different* developer wants to add
 `
+
 ## Development Branch
 
 ### Pre-Comp
